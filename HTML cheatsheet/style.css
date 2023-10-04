@@ -1,0 +1,117 @@
+:root {
+  --colorPurple: rgb(84, 9, 223);
+  --green: rgb(192, 255, 244);
+  --yellow: rgb(255, 252, 183);
+  --red: rgb(255, 188, 200);
+  --purple: rgb(234, 213, 255);
+  --dark:rgb(28, 35, 36);
+}
+* {
+  padding: 0;
+  margin: 0;
+
+}
+
+body {
+  background-color: var(--purple);
+}
+.navbar {
+  background-color: var(--dark) !important;
+}
+.nav-link,
+.navbar-brand {
+  color: white !important;
+}
+.navbar-toggler{
+    background-color: var(--purple) !important;
+}
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+  background: #272822 !important;
+}
+pre[class*="language-"] {
+  padding: 1em;
+  margin: 0.5em 0;
+  overflow: auto;
+  border-radius: 0.3em;
+}
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #f8f8f2;
+  background: none;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+  font-family: Consolas, Monaco, Andale Mono, Ubuntu Mono, monospace;
+  font-size: 1em;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  -webkit-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+#content {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 0.4rem;
+  padding: 2.5rem !important;
+}
+.cont .code-toolbar {
+  font-size: 1rem;
+  overflow-y: auto;
+  max-height: 48vh;
+  z-index: 0;
+  margin: 0 22px;
+}
+
+div.code-toolbar {
+  position: relative;
+}
+h3 {
+  margin: 1rem;
+}
+h2 {
+  margin-block: 1rem;
+  border-top: 1px dashed var(--red);
+  padding-top: 1rem;
+  color: var(--colorPurple) !important;
+  border-radius: 0.2rem;
+  padding: 0.3rem;
+}
+p {
+  background-color: var(--red);
+  border-radius: 0.2rem;
+  padding: 0.3rem;
+  margin-inline: 1.4rem;
+}
+.downloadBtn a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+
+}
+.downloadBtn{
+    background-color: var(--green);
+    border: none;
+}
+.downloadBtn1{
+    background: var(--yellow);
+}
+.downloadBtn:hover{
+    color: white;
+    background-color: var(--purple);
+
+}
+
+@media screen and (max-width:720px){
+    #outerCont{
+        padding: 0.2rem 0 !important;
+        margin: 0.1rem 0;
+    }
+    #content{
+        padding: 0.8rem !important;
+    }
+}
