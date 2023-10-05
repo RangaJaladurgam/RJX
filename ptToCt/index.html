@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Converter</title>
+    <style>
+        body{
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #ccc;
+            font-family: sans-serif;
+        }
+        .wrapper{
+            width: 40rem;
+            min-height: 30rem;
+            margin: 2rem;
+            padding: 2rem;
+            background-color: rgb(148, 136, 136);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            border: 1px solid black;
+            border-radius: 0.3rem;
+        }
+        div{
+            width: 100%;
+        }
+        input[type='text']{
+            width: 100%;
+            height: 1.8rem;
+            border: none;
+            border-radius: 0.3rem;
+            outline: none;
+            padding-inline:0.5rem ;
+        }
+        button{
+            width: 100%;
+            border: none;
+            border-radius: 0.3rem;
+            padding:0.5rem;
+            background-color: rgb(8, 121, 141);
+            color: white;
+        }
+        .text-center{
+        text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div>
+            <h2 class="text-center">Plain Text to Cipher Text</h2>
+        </div>
+        <div>
+            <input type="text" id="text" placeholder="Enter the Text">
+        </div>
+        <div>
+            <button onclick="toCt()" >Convert</button>
+        </div>
+        <div>
+            <h3 class="text-center" id="ct"></h3>
+        </div>
+    </div>
+    
+    
+    
+    <script>
+        let text = document.getElementById("text"); 
+        let CText = '';
+        const toCt = () => {
+            var plainText = text.value.toLowerCase();
+            letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+            for (letter of plainText) {
+            let alg = (letters.indexOf(letter) + 3) % letters.length;
+            var ciphertext = letters[alg].toUpperCase();
+            CText += ciphertext;
+            }
+            ct.innerHTML = ` Cipher Text is ${CText}`;
+        }
+    </script>
+</body>
+
+</html>
